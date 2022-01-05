@@ -1,0 +1,16 @@
+1) Create a java project in IntelliJ idea community editor(or any IDE).
+2) Unzip the folder dg3483-hw1.
+3) copy the src folder in your project folder.
+4) Buid the project.
+5) copy the jar file on the disk on which you have mounted your hadoop cluster.
+6) access the folder from hadoop bash machine.
+7) Run the below command assuming all the input fles have been uploaded in hadoop.
+hadoop jar Hadoop_NGram.jar /user/hduser/<path of inputfiles> output
+8) after all the jobs will run successfull, access the output folder by command-:
+hadoop fs -ls /user/hduser/output
+9)Access final3 folder-:
+hadoop fs -ls /user/hduser/output/final3
+10) copy the output file on local disk.
+hadoop fs -copyToLocal /user/hduser/output/final3/part-r-00000
+11) access this file through vi editor. 
+
